@@ -1,0 +1,17 @@
+.inputcity {
+  max-width: 700px;
+  margin: 30px auto 0 auto;
+  box-shadow: 10px -2px 20px 2px rgb(0 0 0 / 30%);
+}
+
+.headtitle {
+  color: white;
+  height: 200px;
+  font-size: 68px;
+  font-weight: 600;
+  background-color: rgb(19, 53, 53);
+  text-align: center;
+  background-image: url("../images/bg7.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,37 @@
+.login {
+  background-image: url("../images/bg6.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.login-box {
+  color: white;
+  padding: 14% 8%;
+  /* width:200px; */
+  /* margin: 10% 1%; */
+  background-color: rgba(0.5, 0.5, 0.5, 0.5);
+  margin-left: -32%;
+}
+
+.login-btn {
+  width: 20vw;
+  background: linear-gradient(
+    rgb(163, 199, 201),
+    rgb(96, 133, 134),
+    rgb(23, 58, 66)
+  );
+}
+
+.main-header {
+  font-size: 84px;
+  text-align: right;
+  color: white;
+  font-weight: 600;
+  line-height: 1;
+  padding-top: 15%;
+  padding-right: 1%;
+}
