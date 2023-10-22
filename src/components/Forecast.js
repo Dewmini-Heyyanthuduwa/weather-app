@@ -22,12 +22,9 @@ const WEEK_DAYS = [
 const Forecast = ({ data }) => {
   const [showAllDays, setShowAllDays] = useState(false);
   const [showAccordion, setShowAccordion] = useState(true);
-  //   const dayInAWeek = new Date().getDay();
-  //   const forecastDays = WEEK_DAYS.slice(dayInAWeek, WEEK_DAYS.length).concat(WEEK_DAYS.slice(0, dayInAWeek));
 
   const dayInAWeek = new Date().getDay();
-  const forecastDays = WEEK_DAYS.slice(dayInAWeek, WEEK_DAYS.length);
-  const nextThreeDays = forecastDays.slice(0, 3);
+  const forecastDays = WEEK_DAYS.slice(dayInAWeek).concat(WEEK_DAYS.slice(0, dayInAWeek));
 
   const handleClickView = () => {
     setShowAccordion(false);
@@ -39,7 +36,7 @@ const Forecast = ({ data }) => {
       <label className="title">Daily Forecasting</label>
       {showAccordion && (
         <Accordion allowZeroExpanded>
-          {data.list.splice(0, 3).map((item, idx) => (
+          {data.list.slice(0, 3).map((item, idx) => (
             <AccordionItem key={idx}>
               <AccordionItemHeading>
                 <AccordionItemButton>
@@ -49,7 +46,7 @@ const Forecast = ({ data }) => {
                       className="icon-small"
                       alt="weather"
                     />
-                    <label className="day">{nextThreeDays[idx]}</label>
+                    <label className="day">{forecastDays[idx]}</label>
                     <label className="description">
                       {item.weather[0].description}
                     </label>
@@ -100,7 +97,7 @@ const Forecast = ({ data }) => {
       {showAllDays && (
         <div>
           <Accordion allowZeroExpanded>
-            {data.list.splice(0, 7).map((item, idx) => (
+            {data.list.slice(0, 7).map((item, idx) => (
               <AccordionItem key={idx}>
                 <AccordionItemHeading>
                   <AccordionItemButton>
